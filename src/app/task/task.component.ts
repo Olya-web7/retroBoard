@@ -7,11 +7,10 @@ import { Task } from '../task.model';
   styleUrls: ['./task.component.css'],
 })
 
-
 export class TaskComponent {
   enteredContent = '';
   enteredTitle = '';
-  @Output() taskCreated = new EventEmitter();
+  @Output() taskCreated = new EventEmitter<Task>();
 
   onAddTask() {
     const task: Task = { title: this.enteredTitle, content: this.enteredContent }

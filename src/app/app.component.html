@@ -2,5 +2,6 @@
 <h1>{{title}}</h1>
 <main>
   <app-task (taskCreated)="onTaskAdded($event)"></app-task>
+  <hr>
   <app-task-list [tasks]="storedTasks"></app-task-list>
 </main>

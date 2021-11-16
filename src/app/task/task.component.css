@@ -1,21 +1,18 @@
 
 mat-card {
-  /* width: 80%; */
-  /* margin: auto; */
-  background: #393e46;
+  background: #222831;
   color: #3f51b5;
 }
 
 mat-form-field,
 textarea {
   width: 100%;
-  color: #00adb5;
+  color: #3f51b5;
 }
 
 .mat-raised-button {
-  /* background: #3f51b5; */
   color: #222831;
 }
-.mat-form-field:focus .mat-form-field-ripple {
-  background-color: #00adb5;
-}
+/*.mat-form-field:focus .mat-form-field-ripple {*/
+/*  background-color: #3f51b5;*/
+/*}*/
