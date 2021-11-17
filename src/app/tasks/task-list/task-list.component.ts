@@ -9,5 +9,5 @@ import { TasksService } from '../tasks.service';
 })
 export class TaskListComponent {
   @Input() tasks: Task[] = [];
-  constructor(TasksService: TasksService) {}
+  constructor(public TasksService: TasksService) {}
 }
