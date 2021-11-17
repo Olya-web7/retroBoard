@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { Task } from './tasks/task.model';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,9 +7,4 @@ import { Task } from './tasks/task.model';
 })
 export class AppComponent {
   title = 'RetroBoard';
-  storedTasks: Task[] = [];
-
-  onTaskAdded(task: any) {
-    this.storedTasks.push(task);
-  }
 }

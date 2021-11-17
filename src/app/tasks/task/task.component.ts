@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { Task } from '../task.model';
+import { Component } from '@angular/core';
 import { NgForm } from "@angular/forms";
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-task',
@@ -11,16 +11,13 @@ import { NgForm } from "@angular/forms";
 export class TaskComponent {
   enteredContent = '';
   enteredTitle = '';
-  @Output() taskCreated = new EventEmitter<Task>();
+
+  constructor(public tasksService: TasksService) {}
 
   onAddTask(form: NgForm) {
     if (form.invalid) {
       return;
-    }
-    const task: Task = { 
-      title: form.value.title, 
-      content: form.value.content 
-    };
-    this.taskCreated.emit(task);
+    }    
+    this.tasksService.addTask(form.value.title, form.value.content);
   }
 }
